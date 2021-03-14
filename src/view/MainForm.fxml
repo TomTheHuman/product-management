@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPaneContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1000.0" style="-fx-background-color: #5b6a73;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainForm">
+   <children>
+      <AnchorPane fx:id="anchorPaneParts" layoutX="20.0" layoutY="69.0" prefHeight="325.0" prefWidth="475.0" style="-fx-background-radius: 15; -fx-background-color: #7d93a1;">
+         <children>
+            <Button fx:id="buttonAddParts" layoutX="196.0" layoutY="282.0" mnemonicParsing="false" onAction="#onActionAddPart" prefHeight="29.0" prefWidth="80.0" style="-fx-background-radius: 10;" text="Add" />
+            <Button fx:id="buttonDeleteParts" layoutX="381.0" layoutY="282.0" mnemonicParsing="false" onAction="#onActionDeletePart" prefHeight="29.0" prefWidth="80.0" style="-fx-background-radius: 10;" text="Delete" />
+            <Button fx:id="buttonModifyParts" layoutX="289.0" layoutY="282.0" mnemonicParsing="false" onAction="#onActionModifyPart" prefHeight="29.0" prefWidth="80.0" style="-fx-background-radius: 10;" text="Modify" />
+            <TextField fx:id="textFieldSearchParts" layoutX="201.0" layoutY="20.0" prefHeight="36.0" prefWidth="260.0" promptText="Search by Part ID or Name" />
+            <TableView fx:id="tableViewParts" layoutX="14.0" layoutY="65.0" prefHeight="195.0" prefWidth="447.0">
+              <columns>
+                <TableColumn fx:id="partIdCol" prefWidth="65.0" text="Part ID" />
+                <TableColumn fx:id="partNameCol" prefWidth="135.0" text="Part Name" />
+                  <TableColumn fx:id="partInvCol" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="partPriceCol" prefWidth="145.0" text="Price / Cost per Unit" />
+              </columns>
+            </TableView>
+            <Label fx:id="labelParts" layoutX="14.0" layoutY="20.0" prefHeight="36.0" prefWidth="153.0" text="Parts" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelTitle" layoutX="28.0" layoutY="20.0" prefHeight="36.0" prefWidth="460.0" text="Inventory Management System" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="anchorPaneProducts" layoutX="506.0" layoutY="69.0" prefHeight="325.0" prefWidth="475.0" style="-fx-background-radius: 15; -fx-background-color: #7d93a1;">
+         <children>
+            <Button fx:id="buttonAddProducts" layoutX="196.0" layoutY="282.0" mnemonicParsing="false" onAction="#onActionAddProduct" prefHeight="29.0" prefWidth="80.0" style="-fx-background-radius: 10;" text="Add" />
+            <Button fx:id="buttonDeleteProducts" layoutX="381.0" layoutY="282.0" mnemonicParsing="false" onAction="#onActionDeleteProduct" prefHeight="29.0" prefWidth="80.0" style="-fx-background-radius: 10;" text="Delete" />
+            <Button fx:id="buttonModifyProducts" layoutX="289.0" layoutY="282.0" mnemonicParsing="false" onAction="#onActionModifyProduct" prefHeight="29.0" prefWidth="80.0" style="-fx-background-radius: 10;" text="Modify" />
+            <TextField fx:id="textFieldSearchProducts" layoutX="201.0" layoutY="20.0" prefHeight="36.0" prefWidth="260.0" promptText="Search by Part ID or Name" />
+            <TableView fx:id="tableViewProducts" layoutX="14.0" layoutY="65.0" prefHeight="195.0" prefWidth="447.0">
+               <columns>
+                  <TableColumn fx:id="productIdCol" prefWidth="65.0" text="Product ID" />
+                  <TableColumn fx:id="productNameCol" prefWidth="135.0" text="Product Name" />
+                  <TableColumn fx:id="productInvCol" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="productPriceCol" prefWidth="145.0" text="Price / Cost per Unit" />
+               </columns>
+            </TableView>
+            <Label fx:id="labelProducts" layoutX="14.0" layoutY="20.0" prefHeight="36.0" prefWidth="153.0" text="Products" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="buttonExit" layoutX="796.0" layoutY="407.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="29.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #ff8980;" text="Exit" />
+   </children>
+</AnchorPane>
